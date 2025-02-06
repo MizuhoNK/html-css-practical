@@ -25,6 +25,7 @@ body {
   /* ここでフォントサイズを指定するとMyProfileとナビの各々で文字の大きさを変更したいときに対応できない*/
   font-weight: bold;
   text-decoration: none;
+  color: #000000;
 }
 
 /* MyProfile 見出し */
@@ -78,11 +79,12 @@ h2 {
 }
 
 /* Aboutセクション */
-#about-inner {
+.about-inner {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  flex-wrap: row;
   align-items: center;
-  padding: 10px;
+  /* padding: 10px; */
   margin: 20px auto; /*顔写真と紹介の配置を調整する*/
   max-width: 960px;
 }
@@ -125,7 +127,7 @@ footer {
 
 /* スマホ用のレイアウト　 */
 /* 横幅が767px以下の場合 */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 766.34px) {
   h1 {
     font-size: 28px;
     margin: 0 0 0 0;
@@ -141,6 +143,13 @@ footer {
     font-size: 28px;
     padding: 30px 0 20px 0; /*PC版より余白を少なくする*/
   }
+
+  /* Aboutセクション */
+  .about-inner {
+    flex-direction: column;
+  }
+
+  /* Worksセクション */
   .works-item {
     width: 100%;
     text-align: center;
